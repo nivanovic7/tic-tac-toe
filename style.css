@@ -16,13 +16,14 @@
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 320px;
 }
 
 .buttons > * {
-  width: 80px;
   text-align: center;
+  width: 30px;
 }
 
 .icons {
@@ -62,18 +63,38 @@
 }
 
 .next-playing {
+  width: 80px;
+  margin: auto;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding: 5px;
   border: 2px solid gray;
   border-radius: 10px;
   position: relative;
+  text-align: center;
 }
 
 .next-playing .icons {
-  position: absolute;
-  left: 5px;
+  position: relative;
+  width: 30px;
   transform: scale(0.6);
+}
+
+.next-playing .icon-x {
+  display: none;
+}
+
+.next-playing .icon-o {
+  display: none;
+}
+
+.next-playing .icon-o::after {
+  display: none;
+  left: 0;
+}
+
+.play-again {
+  width: 30px;
 }
 
 .row {
@@ -147,4 +168,8 @@
 
 .score > * {
   width: 80px;
+}
+
+.show {
+  display: block;
 }
