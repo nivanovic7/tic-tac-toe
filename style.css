@@ -27,6 +27,7 @@
 
 .icons {
   position: relative;
+  height: 30px;
 }
 
 .icon-x::after,
@@ -34,12 +35,11 @@
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 6px;
-  top: 0;
-  left: 0%;
+  width: 6px;
+  height: 100%;
   border-radius: 10px;
   background-color: red;
+  left: 10px;
 }
 
 .icon-x::after {
@@ -54,12 +54,26 @@
   content: "";
   display: block;
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 100%;
   border: 6px solid rgb(213, 233, 37);
   border-radius: 50%;
-  top: -9px;
   left: 30px;
+}
+
+.next-playing {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  position: relative;
+}
+
+.next-playing .icons {
+  position: absolute;
+  left: 5px;
+  transform: scale(0.6);
 }
 
 .row {
