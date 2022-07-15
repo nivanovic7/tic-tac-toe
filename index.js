@@ -1,11 +1,17 @@
 const cell = document.querySelectorAll(".cell");
-const ic = document.querySelectorAll(".next-playing .icons > div");
 
-console.log(ic);
+let isPlayingX = true;
 cell.forEach((el) => {
   el.addEventListener("click", function () {
-    this.querySelector(".figure-x").style.display = "flex";
-    ic.forEach((el) => {
+    //display X or O depending on who is playing
+    isPlayingX
+      ? this.querySelector(".figure-x").classList.add("show")
+      : this.querySelector(".figure-o").classList.add("show");
+    isPlayingX = !isPlayingX;
+    this.style.pointerEvents = "none";
+
+    //toggle whoo is playing next
+    document.querySelectorAll(".next-playing .icons > div").forEach((el) => {
       el.classList.toggle("show");
     });
   });

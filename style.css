@@ -6,7 +6,11 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(139, 100, 100);
+  background: linear-gradient(
+    to right bottom,
+    rgba(163, 47, 47, 1),
+    rgba(163, 47, 47, 0.8)
+  );
 }
 
 .container {
@@ -181,5 +185,5 @@ body {
 }
 
 .show {
-  display: block !important;
+  display: flex !important;
 }
