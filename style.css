@@ -19,6 +19,62 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 47, 47, 0.6);
+  z-index: 10;
+  display: none;
+  align-items: center;
+}
+
+.modal__text {
+  color: white;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: rgba(31, 30, 32, 1);
+  align-items: center;
+  text-align: center;
+}
+
+.modal__text > * {
+  margin: 1rem;
+}
+
+.modal__text .message {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.modal .icon-x,
+.modal .icon-o {
+  display: none;
+}
+
+.modal .icon-x::before,
+.modal .icon-x::after,
+.modal .icon-o::after {
+  left: 33%;
+  bottom: 5px;
+}
+
+.modal button {
+  padding: 5px 15px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.next-round {
+  background-color: rgb(181, 230, 84);
 }
 
 .buttons {
