@@ -2,8 +2,8 @@ const cell = document.querySelectorAll(".cell");
 const quitModal = document.querySelector(".quit");
 
 let isPlayingX = true;
-const xPlayerMoves = [];
-const oPlayerMoves = [];
+let xPlayerMoves = [];
+let oPlayerMoves = [];
 
 const showMessage = function () {
   document.querySelector(".modal").classList.add("show");
@@ -53,4 +53,27 @@ cell.forEach((el) => {
 
 quitModal.addEventListener("click", function () {
   document.querySelector(".modal").classList.remove("show");
+  const modalFigureX = document.querySelector(".modal .icon-x");
+  const modalFigureO = document.querySelector(".modal .icon-o");
+  const figureX = document.querySelector(".next-playing .icon-x");
+  const figureO = document.querySelector(".next-playing .icon-o");
+
+  resetBoard();
+  xPlayerMoves = [];
+  oPlayerMoves = [];
+
+  figureO.classList.remove("show");
+  figureX.classList.add("show");
+
+  modalFigureX.classList.remove("show");
+  modalFigureO.classList.remove("show");
+  isPlayingX = true;
 });
+
+const resetBoard = function () {
+  cell.forEach((el) => {
+    el.querySelector(".figure-o").classList.remove("show");
+    el.querySelector(".figure-x").classList.remove("show");
+    el.style.pointerEvents = "auto";
+  });
+};
